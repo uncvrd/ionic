@@ -12,6 +12,7 @@ export function createSwipeBackGesture(
 ): Gesture {
   const win = el.ownerDocument!.defaultView!;
   function canStart(detail: GestureDetail) {
+    console.log(detail);
     return detail.startX <= 50 && canStartHandler();
   }
 
